@@ -4,9 +4,8 @@ class Config:
     '''
     General configuration parent class
     '''
-    NEWS_API_BASE_URL='https://newsapi.org/v2/top-headlines?country=us&apiKey=f4cbfecd4e41465c841393d6b9a1f3c9'
-    NEWS_API_KEY=os.environ.get('NEWS_API_KEY')
-    SECRET_KEY=os.environ.get('SECRET_KEY')
+    SECRET_KEY = os.environ.get('SECRET_KEY')
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://flora:wambui@localhost/pitches'
 
 
 

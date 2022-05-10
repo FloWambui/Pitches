@@ -5,6 +5,6 @@ from . import main
 @main.route('/')
 def home():
     title = 'The Pitch Hub'
-    data = "Welcome to Pitch Hub"
+    message = "Make your Best Impression. "
     
-    return render_template('index.html', title=title, datum=data)
+    return render_template('index.html',title=title,message=message)

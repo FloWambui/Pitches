@@ -1,1 +1,100 @@
-<h1>Welcome to Pitches App</h1>
+{% extends 'base.html' %}
+<!-- Styles block -->
+
+{%block styles%} {{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}" />
+{%endblock%}
+<!-- Content block -->
+{%block body%}
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">PITCHES</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href=""
+          ><button type="button" class="btn btn-outline-warning">
+            HOME
+          </button></a
+        >
+        <a class="nav-link" href=""
+          ><button type="button" class="btn btn-outline-warning">
+            SIGN UP
+          </button></a
+        >
+        <a class="nav-link" href=""
+          ><button type="button" class="btn btn-outline-warning">
+            LOGIN
+          </button></a
+        >
+      </div>
+    </div>
+  </div>
+</nav>
+<div class="row">
+  <div class="col-lg-4 col-md-6 col-sm-12 intro">
+    <h1>The Pitch Hub</h1>
+    <p>{{message}}</p>
+  </div>
+
+  <div class="col-lg-4 col-md-6 col-sm-12 pitch">
+      
+          <div class="row">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title pt-3">Business Pitch</h5>
+                  <h6 class="card-subtitle mb-2 text-muted pb-5">Impress That Investor</h6>
+                  <p class="card-text">A business pitch is a business plan that you present to your
+                    potential investors to secure funding. The pitch helps you explain
+                    your business to investors to enable them to make the right
+                    decisions. One of the best ways you can use to deliver a business
+                    pitch is by using visual communication to incorporate diagrams and
+                    other visuals in your presentation to make your audience more
+                    attentive and interested.</p>
+                  
+                  <a href="#" class="card-link">Read More.</a>
+                </div>
+              </div>              
+          </div>
+          <div class="row">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title pt-3">Elevator Pitch</h5>
+                  <h6 class="card-subtitle mb-2 text-muted pb-5">Get Hired</h6>
+                  <p class="card-text">An elevator pitch—also known as an elevator speech—is a quick
+                    synopsis of your background and experience. The reason it's called
+                    an elevator pitch is that it should be short enough to present
+                    during a brief elevator ride.This speech is all about you: who you
+                    are, what you do, and what you want to do (if you're job hunting).</p>
+                  
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>              
+          </div>
+          <div class="row">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title pt-3">Pick-Up Lines</h5>
+                  <h6 class="card-subtitle mb-2 text-muted pb-5">Impress That lady/gent</h6>
+                  <p class="card-text">A pickup line is a planned effort to start a conversation with a
+                    stranger in romantic or sexual pursuit of them.</p>
+                  
+                  <a href="#" class="card-link">Read More</a>
+                </div>
+              </div>              
+          </div>
+      
+  </div>
+</div>
+
+{%endblock body%}
