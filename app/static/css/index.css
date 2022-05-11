@@ -7,20 +7,20 @@ body{
     background-color:black;
     color:bisque;
     font-family: 'Montserrat', sans-serif;
-    overflow:hidden;
-
+    
 }
 .navbar{
-    background-color:bisque !important;
-       
+    background-color:bisque !important;  
+    color: black !important;     
 }
 .navbar-brand{
-    font-family: 'Macondo', cursive;
+    font-family: 'Macondo', cursive !important; 
     font-size: 30px;
     font-weight: 800;
-
+    color: black !important;
 }
-button{
+.navbar ul{
+    
     color:black !important;
     font-size: 20px !important;
 }
