@@ -1,1 +1,1 @@
-SECRET_KEY='ABSlock#22!.'
+SECRET_KEY='population'
