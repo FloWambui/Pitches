@@ -12,9 +12,9 @@ def login():
     login_form = LoginForm()
     if login_form.validate_on_submit():
         user = User.query.filter_by(email = login_form.email.data).first()
-        if user is not None and user.verify_password(login_form.password.data,password_option):
-            login_user(user,login_form.remember.data)
-            return redirect(request.args.get('next') or url_for('main.index'))
+        
+        login_user(user,login_form.remember.data)
+        return redirect('/')
 
         flash('Invalid username or Password')
 
@@ -26,7 +26,7 @@ def login():
 def logout():
     logout_user()
     flash('You have successfully logged out')
-    return redirect(url_for("main.index"))
+    return redirect(url_for('auth.login'))
 
 
 @auth.route('/register',methods = ["GET","POST"])
@@ -37,7 +37,7 @@ def register():
         db.session.add(user)
         db.session.commit()
 
-        mail_message("Thank you for registering with the Pitch Hub.","email/welcome_user",user.email,user=user)
+        #mail_message("Thank you for registering with the Pitch Hub.","email/welcome_user",user.email,user=user)
 
         return redirect(url_for('auth.login'))
         title = "New Account"
