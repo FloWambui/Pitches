@@ -1,10 +1,12 @@
 import os
 
 
+
 class Config:
     '''
     General configuration parent class
     '''
+  
     SECRET_KEY = os.environ.get('SECRET_KEY')
     
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
@@ -19,12 +21,11 @@ class Config:
 
 
 class ProdConfig(Config):
-    uri = os.getenv('DATABASE_URL')
-    if uri and uri.startswith('postgres://'):
-        uri = uri.replace('postgres://', 'postgresql://', 1)
-
-    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL") 
-    SQLALCHEMY_DATABASE_URI = uri
+    # uri = os.getenv('DATABASE_URL')
+    # if uri and uri.startswith('postgres://'):
+    #     uri = uri.replace('postgres://', 'postgresql://', 1)    
+    # SQLALCHEMY_DATABASE_URI = uri
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://flora:wambui@localhost/pitches'
 
 
 class DevConfig(Config):
