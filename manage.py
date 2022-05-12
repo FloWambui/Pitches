@@ -6,7 +6,7 @@ from flask_wtf.csrf import CSRFProtect
 import app
 
 # Creating app instance
-app = create_app('development')
+app = create_app('production')
 csrf = CSRFProtect(app)
 app.config['SECRET_KEY'] = "secretkey"
 app.config['WTF_CSRF_SECRET_KEY'] = "secretkey"
